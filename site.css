@@ -36,7 +36,7 @@ img {
 
 .si-text-container {
   position: relative;
-  font-size: 100px;
+  font-size: 8vw;
   color: lightgrey;
   text-transform: uppercase;
   font-weight: bolder;
@@ -159,7 +159,7 @@ img {
 }
 
 .si-widget-content {
-  width: 100px;
+  width: 7%;
   z-index: 10;
 }
 
