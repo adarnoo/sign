@@ -1,12 +1,12 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "mtd";
   cursor: default;
+  font-family: helvetica;
 }
 
 html {
-  background-color: grey;
+  background-color: black;
 }
 
 a {
@@ -18,261 +18,54 @@ img {
   width: 100%;
 }
 
-@font-face {
-  font-family: 'mtd';
-  src: url('./typefaces/mtdbt2f-f.otf') format('truetype');
-  font-display: block;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.si-page {
+.sm-page {
   position: relative;
+  width: 100vw;
 }
 
-.si-section-container {
-  position: relative;
-}
-
-.si-text-container {
-  position: relative;
-  font-size: 8vw;
-  color: lightgrey;
-  text-transform: uppercase;
-  font-weight: bolder;
-  padding: 0 5px;
-  list-style: none;
-}
-
-.si-text-container--top, li {
-  margin-bottom: 200px !important;
-}
-
-.si-text-container, li {
-  margin-bottom: 150px;
-}
-
-/* Image Styling */
-
-.si-image-container {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  display: flex;
-  z-index: 10;
-}
-
-.si-image-container-row {
-  width: 33.33%;
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-}
-
-.si-image {
-  margin-bottom: 250px !important;
-}
-
-.si-image-inner:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-.si-image--extra-padding-small {
-  padding-top: 50px !important;
-}
-
-.si-image--extra-padding-medium {
-  padding-top: 100px !important;
-}
-
-.si-image--extra-padding-large {
-  padding-top: 250px !important;
-}
-
-.si-image--small {
-  width: 30%;
-  margin: 0 auto;
-}
-
-.si-image--medium {
+.sm-logo-container {
+  position: fixed;
   width: 50%;
-  margin: 0 auto;
-}
-
-.si-image--large {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.si-image--left {
-  margin: 0;
-}
-
-.si-image--right {
-  margin: 0 0 0 auto;
-}
-
-/* Drag Styling */
-
-.si-text-container--drag {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-  color: red;
-  animation: flashing-text 1s infinite;
-  margin-bottom: 50px;
-}
-
-@keyframes flashing-text {
-  0% {
-    opacity: 1;
-  }
-  24% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-  }
-  49% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  74% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-}
-
-.si-drag-image-container {
-  position: relative;
-  height: 100vh;
-}
-
-.si-widget-content {
-  width: 7%;
   z-index: 10;
+  top: 10px;
+  left: 10px;
+  mix-blend-mode: exclusion;
 }
 
-.si-widget-content:hover {
-  cursor: move;
-}
-
-#draggable {
-  position: absolute;
-  top: 50px;
-  left: 20px
-}
-
-#draggable-2 {
-  position: absolute;
-  top: 300px;
-  right: 100px
-}
-
-#draggable-3 {
-  position: absolute;
-  top: 100px;
-  right: 400px
-}
-
-#draggable-4 {
-  position: absolute;
-  bottom: 150px;
-  left: 300px
-}
-
-#draggable-5 {
-  position: absolute;
-  top: 600px;
-  right: 300px
-}
-
-#draggable-6 {
-  position: absolute;
-  top: 100px;
-  right: 150px
-}
-
-#draggable-7 {
-  position: absolute;
-  bottom: 100px;
-  right: 500px
-}
-
-#draggable-8 {
-  position: absolute;
-  top: 25px;
-  left: 200px
-}
-
-#draggable-9 {
-  position: absolute;
-  bottom: 100px;
-  left: 150px
-}
-
-#draggable-10 {
-  position: absolute;
-  top: 450px;
-  right: 350px
-}
-
-#draggable-11 {
-  position: absolute;
-  bottom: 300px;
-  left: 75px
-}
-
-#draggable-12 {
-  position: absolute;
-  top: 50px;
-  left: 500px
-}
-
-#draggable-13 {
-  position: absolute;
-  top: 125px;
-  left: 300px
-}
-
-#draggable-14 {
-  position: absolute;
-  top: 200px;
-  right: 500px
-}
-
-/* Progress Bar Styling */
-
-.progress {
+.sm-text-container {
   position: fixed;
   top: 0;
   left: 0;
-  height: 20px;
-  background-color: black;
-  z-index: 1000;
+  width: 50%;
+  z-index: 10;
+  mix-blend-mode: exclusion;
+  color: red;
 }
 
-.content {
-  width: 100%;
-  height: 100vh;
+.sm-background-image {
+  opacity: 100%;
+  mix-blend-mode: exclusion;
+  filter: blur(1px);
 }
 
-/* Background Styling */
+.sm-background-image--minus {
+  margin-top: -200px;
+}
 
-/* .si-background-container {
-  position: absolute;
+.sm-background-image--minus-big {
+  margin-top: -400px;
+}
+
+.sm-landing-image-container {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
   top: 0;
-  z-index: 0;
-  mix-blend-mode: color-burn;
-  opacity: 0.1;
-} */
+  left: 0;
+  mix-blend-mode: exclusion;
+  opacity: 20%;
+}
+
+.sm-video-margin {
+  width: 100%;
+}
