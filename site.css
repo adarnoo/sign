@@ -3,6 +3,8 @@ body {
   margin: 0;
   cursor: default;
   font-family: helvetica;
+  letter-spacing: 2px;
+  font-weight: normal;
 }
 
 html {
@@ -18,22 +20,16 @@ img {
   width: 100%;
 }
 
-.sm-page {
+.ht-page {
   position: relative;
   width: 100vw;
 }
 
-.sm-logo-container {
-  position: fixed;
-  width: 50%;
-  z-index: 10;
-  top: 10px;
-  left: 10px;
-  mix-blend-mode: exclusion;
-}
+/* Nav styling */
 
-.sm-text-container {
+.ht-nav-container {
   position: fixed;
+  font-size: 15px;
   top: 0;
   left: 0;
   width: 50%;
@@ -42,30 +38,229 @@ img {
   color: red;
 }
 
-.sm-background-image {
-  opacity: 100%;
-  mix-blend-mode: exclusion;
-  filter: blur(1px);
+.ht-nav-container span {
+  text-decoration: underline;
+  margin-right: 10px;
 }
 
-.sm-background-image--minus {
+.ht-nav-container span:hover {
+  cursor: pointer;
+}
+
+.ht-links-container {
+  margin-bottom: 10px;
+}
+
+/* Pop up styling */
+
+.ht-pop-up-container {
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  z-index: 20;
+  transition: all 1s ease-in-out;
+  overflow-y: scroll;
+  height: 100%;
+  font-size: 32px;
+  line-height: 40px;
+  list-style: none;
+}
+
+.ht-pop-up-container-inner {
+  position: relative;
+  padding: 20px 50px 20px 50px;
+}
+
+.ht-pop-up-container-inner--no-padding {
+  padding: 0px;
+}
+
+.ht-pop-up-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ht-pop-up-text {
+  margin-bottom: 30px;
+}
+
+.ht-pop-up-blue {
+  color: red;
+  text-decoration: underline;
+}
+
+.ht-pop-up-italic {
+  font-style: italic;
+}
+
+.ht-pop-up-container--about {
+  top: 0;
+  left: -200vw;
+}
+
+.ht-pop-up-container--publication {
+  top: 200vh;
+  left: 0;
+}
+
+.ht-pop-up-container--texts {
+  top: 0;
+  left: 200vw;
+}
+
+.ht-pop-up-container--show {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.ht-close-container {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: lighter;
+}
+
+.ht-close-container--about {
+  position: fixed;
+  transition: all 1s ease-in-out;
+  top: 20px;
+  right: 200vw;
+}
+
+.ht-close-container--about--show {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+}
+
+.ht-close-container--publication {
+  position: fixed;
+  transition: all 1s ease-in-out;
+  top: 200vh;
+  right: 40px;
+}
+
+.ht-close-container--publication--show {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+}
+
+.ht-close-container--texts {
+  position: fixed;
+  transition: all 1s ease-in-out;
+  top: 20px;
+  right: -200vw;
+}
+
+.ht-close-container--texts--show {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+}
+
+.ht-close-container:hover {
+  cursor: pointer;
+}
+
+.ht-video-margin {
+  width: 100%;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 10px 3px #b9b9b9;
+  -moz-box-shadow: 0px 0px 10px 3px #B9B9B9;
+  box-shadow: 0px 0px 10px 3px #b9b9b9;
+}
+
+.ht-video-container {
+  width: 50%;
+  margin: 0 25%;
+  padding-bottom: 30px;
+}
+
+.ht-video-container--extra-margin {
+  padding: 30px 0;
+}
+
+.ht-annotation-text {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Publication styling */
+
+.ht-spreads-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 5%;
+}
+
+.ht-spread-image {
+  width: 48%;
+  border: 0.2px black solid;
+  margin-bottom: 30px;
+}
+
+/* Fold styling */
+
+.ht-fold-container {
+  position: fixed;
+  display: flex;
+  top: 200vh;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.ht-fold-container--show {
+  top: 0;
+  opacity: 1;
+}
+
+.ht-left-fold {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #F0F0F0;
+  box-shadow: 0px 0 27px 0 black;
+}
+
+.ht-right-fold {
+  width: 50%;
+  height: 100%;
+  box-shadow: 0px 0 27px 0 black;
+}
+
+/* Background images styling */
+
+.ht-background-image {
+  opacity: 100%;
+  mix-blend-mode: exclusion;
+}
+
+.ht-background-image--minus {
   margin-top: -200px;
 }
 
-.sm-background-image--minus-big {
+.ht-background-image--minus-big {
   margin-top: -400px;
 }
 
-.sm-landing-image-container {
-  position: fixed;
-  width: 100vw;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  mix-blend-mode: exclusion;
-  opacity: 20%;
-}
+/* Mobile View */
 
-.sm-video-margin {
-  width: 100%;
+@media only screen and (min-device-width: 320px) and
+(max-device-width: 480px) and
+(-webkit-min-device-pixel-ratio: 2) {
+
+  /* Nav styling */
+
+  .ht-nav-container {
+    width: 100%;
+    font-size: 28px;
+  }
 }
