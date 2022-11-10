@@ -23,13 +23,14 @@ img {
 .ht-page {
   position: relative;
   width: 100vw;
+  max-width: 99vw;
 }
 
 /* Nav styling */
 
 .ht-nav-container {
   position: fixed;
-  font-size: 15px;
+  font-size: 1vw;
   top: 0;
   left: 0;
   width: 50%;
@@ -81,7 +82,7 @@ img {
   transition: all 1s ease-in-out;
   overflow-y: scroll;
   height: 100%;
-  font-size: 32px;
+  font-size: 2.5vw;
   line-height: 40px;
   list-style: none;
 }
@@ -139,7 +140,7 @@ img {
 }
 
 .ht-close-container {
-  font-size: 32px;
+  font-size: 2.5vw;
   line-height: 36px;
   font-weight: lighter;
   color: red;
@@ -207,7 +208,7 @@ img {
 }
 
 .ht-annotation-text {
-  font-size: 14px;
+  font-size: 1vw;
   text-align: center;
   margin-top: 10px;
 }
