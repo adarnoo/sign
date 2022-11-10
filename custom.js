@@ -19,6 +19,11 @@ $('body').on('click', '#ht-texts-toggle', function(e) {
   $(".ht-close-container--texts").toggleClass("ht-close-container--texts--show");
 });
 
+$('body').on('click', '#ht-summerboy-toggle', function(e) {
+  e.preventDefault();
+  $(".ht-summerboy-video-container").toggleClass("ht-summerboy-video-container--show");
+});
+
 jQuery(document).ready(function ($) {
 
   $('#checkbox').change(function(){
@@ -65,3 +70,12 @@ jQuery(document).ready(function ($) {
     });
 
 });
+
+//Video player
+
+function playVideo() {
+        $('#ht-summerboy-video').trigger('play');
+    }
+    function pauseVideo() {
+        $('#ht-summerboy-video').trigger('remove');
+    }

@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
  </head>
     <body>
       <div class="ht-page">
@@ -27,11 +28,22 @@
             </div>
           </div>
 
-          <div class="ht-spine-container" id="ht-publication-toggle">
-            <div class="ht-spine-image">
+          <div class="ht-bottom-container">
+            <div class="ht-spine-image" id="ht-publication-toggle">
               <img src="./images/book.png">
             </div>
+            <div class="ht-video-image" id="ht-summerboy-toggle">
+              <button onclick="playVideo()">
+                  <img src="./images/video.png">
+              </button>
+            </div>
           </div>
+
+          <div class="ht-summerboy-video-container">
+             <video id="ht-summerboy-video">
+                <source src="./images/summerboy.mp4" type="video/mp4" preload="auto">
+             </video>
+           </div>
 
           <div class="ht-pop-up-container ht-pop-up-container--about">
             <div class="ht-pop-up-container-inner">
@@ -39,19 +51,55 @@
                 About
               </div>
               <div class="ht-pop-up-text">
-                <span class="ht-pop-up-blue">https://howtoinstallabillboard.com</span> is a online exploration of print that acts as a supporting outlet to the publication <span class="ht-pop-up-italic">How to Install a Billboard.</span>
+                <span class="ht-pop-up-red">
+                  https://howtoinstallabillboard.com
+                  <!-- <span class="ht-letter">h</span>
+                  <span class="ht-letter">t</span>
+                  <span class="ht-letter">t</span>
+                  <span class="ht-letter">p</span>
+                  <span class="ht-letter">s</span>
+                  <span class="ht-letter">:</span>
+                  <span class="ht-letter">/</span>
+                  <span class="ht-letter">/</span>
+                  <span class="ht-letter">h</span>
+                  <span class="ht-letter">o</span>
+                  <span class="ht-letter">w</span>
+                  <span class="ht-letter">t</span>
+                  <span class="ht-letter">o</span>
+                  <span class="ht-letter">i</span>
+                  <span class="ht-letter">n</span>
+                  <span class="ht-letter">s</span>
+                  <span class="ht-letter">t</span>
+                  <span class="ht-letter">a</span>
+                  <span class="ht-letter">l</span>
+                  <span class="ht-letter">l</span>
+                  <span class="ht-letter">a</span>
+                  <span class="ht-letter">b</span>
+                  <span class="ht-letter">i</span>
+                  <span class="ht-letter">l</span>
+                  <span class="ht-letter">l</span>
+                  <span class="ht-letter">b</span>
+                  <span class="ht-letter">o</span>
+                  <span class="ht-letter">a</span>
+                  <span class="ht-letter">r</span>
+                  <span class="ht-letter">d</span>
+                  <span class="ht-letter">.</span>
+                  <span class="ht-letter">c</span>
+                  <span class="ht-letter">o</span>
+                  <span class="ht-letter">m</span> -->
+                </span> is a online exploration of print that acts as a supporting outlet to the publication <span class="ht-pop-up-italic">How to Install a Billboard.</span>
               </div>
               <div class="ht-pop-up-text">
                 The publication is a play on the 'Object Book' taking one common everyday object or idea and expanding on it. In this case it focuses on the idea of signs.
               </div>
               <div class="ht-pop-up-text">
-                <li>1. Language</li>
-                <li>2. Billboards</li>
-                <li>3. Sign from Above</li>
-                <li>4. Road Signs</li>
+                <li>Language</li>
+                <li>Billboards</li>
+                <li>Sign from Above</li>
+                <li>Road Signs</li>
               </div>
               <div class="ht-video-container">
-                <video class="ht-video-margin" autoplay muted loop playsinline id="vid" preload="auto">
+                <video class="ht-video-margin" autoplay muted loop playsinline preload="auto">
                   <source src="./images/street-signs.mp4" type="video/mp4">
                 </video>
                 <div class="ht-annotation-text">

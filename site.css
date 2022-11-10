@@ -20,10 +20,16 @@ img {
   width: 100%;
 }
 
+button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
 .ht-page {
   position: relative;
-  width: 100vw;
-  max-width: 99vw;
+  width: 100%;
 }
 
 /* Nav styling */
@@ -56,12 +62,13 @@ img {
   margin-bottom: 10px;
 }
 
-.ht-spine-container {
+.ht-bottom-container {
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 10;
   mix-blend-mode: exclusion;
+  display: flex;
 }
 
 .ht-spine-container:hover {
@@ -69,6 +76,10 @@ img {
 }
 
 .ht-spine-image {
+  width: 100px;
+}
+
+.ht-video-image {
   width: 100px;
 }
 
@@ -97,8 +108,63 @@ img {
 }
 
 .ht-pop-up-title {
+  width: 100%;
   text-align: center;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@-webkit-keyframes pulse {
+  0%   { opacity: 0.8; }
+  50% { opacity: 0.33; }
+  100% { opacity: 0.8; }
+}
+
+.ht-letter {
+  animation: pulse 555ms ease infinite;
+  letter-spacing: 2px;
+}
+
+.ht-letter:nth-child(2n) {
+  animation: pulse 999ms ease infinite;
+}
+
+.ht-letter:nth-child(2n) {
+  animation: pulse 666ms ease infinite;
+}
+
+.ht-letter:nth-child(3n) {
+  animation: pulse 555ms ease infinite;
+}
+
+.ht-letter:nth-child(4n) {
+  animation: pulse 444ms ease infinite;
+}
+
+.ht-letter:nth-child(5n) {
+  animation: pulse 333ms ease infinite;
+}
+
+.ht-letter:nth-child(6n) {
+  animation: pulse 222ms ease infinite;
+}
+
+.ht-letter:nth-child(7n) {
+  animation: pulse 555ms ease infinite;
+}
+
+.ht-letter:nth-child(8n) {
+  animation: pulse 999ms ease infinite;
+}
+
+.ht-letter:nth-child(9n) {
+  animation: pulse 888ms ease infinite;
+}
+
+.ht-letter:nth-child(11n) {
+  animation: pulse 777ms ease infinite;
 }
 
 .ht-pop-up-text {
@@ -109,7 +175,7 @@ img {
   text-indent: 50px;
 }
 
-.ht-pop-up-blue {
+.ht-pop-up-red {
   color: red;
   text-decoration: underline;
 }
@@ -212,6 +278,29 @@ img {
   text-align: center;
   margin-top: 10px;
 }
+
+.ht-summerboy-video-container {
+  position: fixed;
+  height: 100%;
+  width: 60%;
+  margin: 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  mix-blend-mode: exclusion;
+  opacity: 0;
+}
+
+.ht-summerboy-video-container--show {
+  opacity: 1;
+}
+
+#ht-summerboy-video {
+  width: 100%;
+  z-index: 1000;
+}
+
 
 /* Publication styling */
 
@@ -317,6 +406,12 @@ a.control-next {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
+}
+
+@media only screen and (min-device-width: 1150px) and
+(max-device-width: 1380px) and
+(-webkit-min-device-pixel-ratio: 2) {
+
 }
 
 /* Mobile View */
