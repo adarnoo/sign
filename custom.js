@@ -77,5 +77,5 @@ function playVideo() {
         $('#ht-summerboy-video').trigger('play');
     }
     function pauseVideo() {
-        $('#ht-summerboy-video').trigger('remove');
+        $('#ht-summerboy-video').trigger('pause');
     }

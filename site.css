@@ -27,6 +27,10 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .ht-page {
   position: relative;
   width: 100%;
@@ -71,16 +75,20 @@ button {
   display: flex;
 }
 
-.ht-spine-container:hover {
-  cursor: pointer;
-}
-
 .ht-spine-image {
   width: 100px;
 }
 
+.ht-spine-image:hover {
+  cursor: pointer;
+}
+
 .ht-video-image {
   width: 100px;
+}
+
+.ht-video-image:hover {
+  cursor: pointer;
 }
 
 /* Pop up styling */
@@ -107,6 +115,11 @@ button {
   padding: 0px;
 }
 
+.ht-pop-up-columns {
+  display: flex;
+  flex-direction: row;
+}
+
 .ht-pop-up-title {
   width: 100%;
   text-align: center;
@@ -117,9 +130,15 @@ button {
 }
 
 @-webkit-keyframes pulse {
-  0%   { opacity: 0.8; }
-  50% { opacity: 0.33; }
-  100% { opacity: 0.8; }
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.33;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
 .ht-letter {
@@ -175,6 +194,26 @@ button {
   text-indent: 50px;
 }
 
+.ht-pop-up-text--column {
+  min-width: 150px;
+  max-width: 150px;
+  font-size: 1vw;
+  line-height: 1vw;
+  transition: 0.5s linear;
+
+}
+
+.ht-pop-up-text--column:hover {
+  min-width: 300px;
+  max-width: 300px;
+  font-size: 2.5vw;
+  line-height: 3vw;
+}
+
+.ht-pop-up-text--column li {
+  margin-bottom: 20px;
+}
+
 .ht-pop-up-red {
   color: red;
   text-decoration: underline;
@@ -183,6 +222,26 @@ button {
 .ht-pop-up-italic {
   font-style: italic;
 }
+
+.ht-pop-up-image {
+  width: 100%;
+}
+
+.ht-pop-up-image img {
+  margin-bottom: 5px;
+}
+
+.ht-pop-up-image--column {
+  min-width: 150px;
+  max-width: 150px;
+  transition: 0.5s linear;
+}
+
+.ht-pop-up-image--column:hover {
+  min-width: 300px;
+  max-width: 300px;
+}
+
 
 .ht-pop-up-container--about {
   top: 0;
@@ -197,6 +256,7 @@ button {
 .ht-pop-up-container--texts {
   top: 0;
   left: 200vw;
+  overflow-x: scroll;
 }
 
 .ht-pop-up-container--show {
@@ -282,23 +342,44 @@ button {
 .ht-summerboy-video-container {
   position: fixed;
   height: 100%;
-  width: 60%;
-  margin: 0 20%;
+  width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  mix-blend-mode: exclusion;
+  pointer-events: none;
   opacity: 0;
+}
+
+.ht-summerboy-video-container-inner {
+  position: relative;
+  width: 60%;
+  margin: 0 20%;
+  border: solid black 3px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
 }
 
 .ht-summerboy-video-container--show {
   opacity: 1;
+  pointer-events: all;
 }
 
 #ht-summerboy-video {
   width: 100%;
   z-index: 1000;
+}
+
+.ht-summerboy-close {
+  position: absolute;
+  right: 30px;
+  font-size: 2.5vw;
+  line-height: 3vw;
+  z-index: 500;
+  color: red;
+  font-weight: lighter !important;
 }
 
 
