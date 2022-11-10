@@ -83,7 +83,7 @@ img {
   overflow-y: scroll;
   height: 100%;
   font-size: 2.5vw;
-  line-height: 40px;
+  line-height: 3vw;
   list-style: none;
 }
 
@@ -141,7 +141,7 @@ img {
 
 .ht-close-container {
   font-size: 2.5vw;
-  line-height: 36px;
+  line-height: 3vw;
   font-weight: lighter;
   color: red;
 }
