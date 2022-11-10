@@ -8,9 +8,8 @@ $('body').on('click', '#ht-about-toggle', function(e) {
 
 $('body').on('click', '#ht-publication-toggle', function(e) {
   e.preventDefault();
-  $(".ht-pop-up-container--publication").toggleClass("ht-pop-up-container--show");
+  $(".ht-spreads-scroll-container").toggleClass("ht-spreads-scroll-container--show");
   $(".ht-close-container--publication").toggleClass("ht-close-container--publication--show");
-  $(".ht-fold-container").toggleClass("ht-fold-container--show");
 });
 
 $('body').on('click', '#ht-texts-toggle', function(e) {
