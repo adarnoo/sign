@@ -438,23 +438,23 @@ button:hover {
   }
 
   .ht-close-container {
-    font-size: 5vw;
-    line-height: 7vw;
+    font-size: 10vw;
+    line-height: 10vw;
   }
 
   .ht-pop-up-text--column {
     min-width: 200px;
     max-width: 200px;
-    font-size: 1vw;
-    line-height: 1vw;
+    font-size: 2vw;
+    line-height: 3vw;
     transition: 0.5s linear;
   }
 
   .ht-pop-up-text--column:hover {
-    min-width: 350px;
-    max-width: 350px;
-    font-size: 5vw;
-    line-height: 7vw;
+    min-width: 400px;
+    max-width: 400px;
+    font-size: 6vw;
+    line-height: 8vw;
   }
 
   .ht-pop-up-image--column--last {
@@ -489,6 +489,16 @@ button:hover {
   .ht-close-container--publication {
     font-size: 300px;
     top: 20px;
+  }
+
+  /* Background images styling */
+
+  .ht-background-image--minus {
+    margin-top: -100px;
+  }
+
+  .ht-background-image--minus-big {
+    margin-top: -300px;
   }
 
 }
