@@ -25,6 +25,8 @@ button {
   margin: 0;
   background-color: transparent;
   border: none;
+  font-weight: lighter;
+  appearance: none;
 }
 
 button:hover {
@@ -108,7 +110,13 @@ button:hover {
 
 .ht-pop-up-container-inner {
   position: relative;
-  padding: 20px 100px 20px 100px;
+  padding: 20px;
+}
+
+.ht-pop-up-container-inner--extra-padding {
+  padding: 0px 100px;
+  background-color: white;
+  z-index: 50;
 }
 
 .ht-pop-up-container-inner--no-padding {
@@ -129,8 +137,59 @@ button:hover {
   justify-content: center;
 }
 
+.ht-pop-up-title--red {
+  position: fixed;
+  background-color: red;
+  height: 500px;
+  z-index: 10;
+  animation: pulse 444ms ease infinite;
+  margin-bottom: 0px;
+  pointer-events: none;
+}
+
+@-webkit-keyframes pulse {
+  0%   { opacity: 0.8; }
+  50% { opacity: 0.33; }
+  100% { opacity: 0.8; }
+}
+
+.ht-hover-image-container {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  margin: 0 25%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.ht-underline {
+  text-decoration: underline;
+}
+
+.ht-underline:hover {
+  color: red;
+}
+
+.ht-hover-image {
+  display: none;
+}
+
+.ht-hover-image--show {
+  display: block;
+}
+
 .ht-pop-up-text {
   margin-bottom: 30px;
+}
+
+.ht-pop-up-text--bottom {
+  padding-bottom: 200px;
+}
+
+.ht-pop-up-text--padding-top {
+  margin-top: 500px;
+  padding-top: 100px;
 }
 
 .ht-pop-up-text--indent {
@@ -212,26 +271,29 @@ button:hover {
   line-height: 2vw;
   font-weight: lighter;
   color: red;
+  animation: pulse 444ms ease infinite;
 }
 
 .ht-close-container--about {
   position: fixed;
   transition: all 1s ease-in-out;
-  top: 20px;
+  top: 40px;
   right: 200vw;
+  z-index: 20;
 }
 
 .ht-close-container--about--show {
   position: fixed;
   right: 40px;
-  top: 20px;
+  top: 40px;
 }
 
 .ht-close-container--publication {
   position: fixed;
-  right: 0px;
-  top: 10px;
-  font-size: 150px;
+  right: 40px;
+  top: 40px;
+  font-size: 5vw;
+  line-height: 2vw;
 }
 
 .ht-close-container--texts {
@@ -244,7 +306,7 @@ button:hover {
 .ht-close-container--texts--show {
   position: fixed;
   right: 40px;
-  top: 20px;
+  top: 40px;
 }
 
 .ht-close-container:hover {
@@ -253,10 +315,6 @@ button:hover {
 
 .ht-video-margin {
   width: 100%;
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 10px 3px #b9b9b9;
-  -moz-box-shadow: 0px 0px 10px 3px #B9B9B9;
-  box-shadow: 0px 0px 10px 3px #b9b9b9;
 }
 
 .ht-video-container {
@@ -316,7 +374,9 @@ button:hover {
   font-size: 5vw;
   line-height: 4vw;
   z-index: 500;
-  color: red;
+  color: black;
+  font-family: courier;
+  animation: pulse 444ms ease infinite;
 }
 
 
@@ -373,6 +433,18 @@ button:hover {
   margin-top: -400px;
 }
 
+/* Tablet View */
+
+@media only screen and (min-device-width: 480px) and
+(max-device-width: 1050px) and
+(-webkit-min-device-pixel-ratio: 2) {
+
+  .ht-pop-up-container {
+    line-height: 3.5vw;
+  }
+
+}
+
 /* Mobile View */
 
 @media only screen and (min-device-width: 320px) and
@@ -418,10 +490,6 @@ button:hover {
     line-height: 7vw;
   }
 
-  .ht-pop-up-container--about .ht-pop-up-container-inner {
-    padding: 50px 200px 50px 50px;
-  }
-
   .ht-pop-up-container-inner {
     position: relative;
     padding: 50px;
@@ -431,9 +499,18 @@ button:hover {
     margin-bottom: 100px;
   }
 
+  .ht-pop-up-title--red {
+    position: relative;
+  }
+
+  .ht-pop-up-text--padding-top {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
   .ht-video-container {
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     padding-bottom: 100px;
   }
 
@@ -472,8 +549,13 @@ button:hover {
   }
 
   .ht-summerboy-close {
-    font-size: 20vw;
-    line-height: 13vw;
+    font-size: 10vw;
+    line-height: 7vw;
+  }
+
+  .ht-hover-image-container {
+    width: 70%;
+    margin: 0 15%;
   }
 
   /* Publication styling */
@@ -488,11 +570,6 @@ button:hover {
 
   .ht-spread-image img {
     padding-right: 30px;
-  }
-
-  .ht-close-container--publication {
-    top: -10px;
-    font-size: 300px;
   }
 
   /* Background images styling */
