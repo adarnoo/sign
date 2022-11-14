@@ -197,8 +197,8 @@ button:hover {
 }
 
 .ht-pop-up-text--column {
-  min-width: 150px;
-  max-width: 150px;
+  min-width: 15%;
+  max-width: 15%;
   font-size: 1vw;
   line-height: 1vw;
   transition: 0.5s linear;
@@ -206,8 +206,8 @@ button:hover {
 }
 
 .ht-pop-up-text--column:hover {
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 30%;
+  max-width: 30%;
   font-size: 2.5vw;
   line-height: 3vw;
 }
@@ -234,14 +234,14 @@ button:hover {
 }
 
 .ht-pop-up-image--column {
-  min-width: 150px;
-  max-width: 150px;
+  min-width: 15%;
+  max-width: 15%;
   transition: 0.5s linear;
 }
 
 .ht-pop-up-image--column:hover {
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 30%;
+  max-width: 30%;
 }
 
 .ht-pop-up-image--column--last {
